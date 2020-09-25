@@ -3,7 +3,11 @@
   --light-grayish-blue: hsl(234, 14%, 74%);
   --grayish-blue: hsl(233, 13%, 49%);
   --dark-grayish-blue: hsl(232, 13%, 33%);
-  --linear-gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --linear-gradient: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
 }
 
 * {
@@ -158,10 +162,18 @@ input:checked + .slider:before {
   text-transform: uppercase;
   color: white;
   background-image: var(--linear-gradient);
+  transition: 0.2s;
+}
+
+.btn-more:hover {
+  background-color: white;
+  background-image: none;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
 }
 
 .flex-two {
-  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));; 
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
 .flex-two h3 {
@@ -178,13 +190,23 @@ input:checked + .slider:before {
 }
 
 .flex-two .text-last {
-  border-bottom: 1px solid var(--very-light-grayish-blue);  
+  border-bottom: 1px solid var(--very-light-grayish-blue);
 }
 
 .flex-two .btn-more {
   background-color: white;
   background-image: none;
   color: hsl(237, 63%, 64%);
+}
+
+.flex-two .btn-more:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 78%, 70%),
+    hsl(237, 63%, 64%)
+  );
+  color: white;
+  border: 1px solid white;
 }
 
 .card .monthly {
@@ -242,7 +264,7 @@ input:checked + .slider:before {
   .flex-three {
     border-radius: 0 10px 10px 0;
   }
-  
+
   .flex-container {
     flex-direction: row;
     position: relative;
@@ -258,7 +280,6 @@ input:checked + .slider:before {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 700px) {
-
   .top-pricing {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -272,11 +293,9 @@ input:checked + .slider:before {
   .top-pricing span {
     font-size: 20px;
   }
-
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1050px) {
-
   .top-pricing {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -308,5 +327,4 @@ input:checked + .slider:before {
   .card p {
     font-size: 1.2rem;
   }
-
 }
