@@ -1,0 +1,312 @@
+:root {
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+  --linear-gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-grayish-blue);
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+  background-size: 40%, 40%;
+  font-size: 15px;
+  height: 100%;
+}
+
+.btn-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 5%;
+}
+
+/* Hide default HTML checkbox */
+.btn-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--linear-gradient);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-pricing {
+  margin-top: 15%;
+  margin-bottom: 15%;
+  text-align: center;
+}
+
+.top-pricing h1 {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 8%;
+}
+
+.pricing-text {
+  color: var(--light-grayish-blue);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  margin-bottom: 10%;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: var(--grayish-blue);
+  margin-bottom: 5%;
+  margin-top: 10px;
+}
+
+.card h1 {
+  color: var(--dark-grayish-blue);
+  font-size: 4rem;
+  display: inline-block;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+
+.dollar {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.card p {
+  color: var(--grayish-blue);
+  padding: 15px;
+  border-top: 1px solid var(--light-grayish-blue);
+}
+
+.text-last {
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.btn-more {
+  margin-top: 25px;
+  background-color: var(--very-light-grayish-blue);
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  border: none;
+  padding: 15px;
+  text-transform: uppercase;
+  color: white;
+  background-image: var(--linear-gradient);
+}
+
+.flex-two {
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));; 
+}
+
+.flex-two h3 {
+  color: white;
+}
+
+.flex-two p {
+  color: white;
+  border-top: 1px solid var(--very-light-grayish-blue);
+}
+
+.flex-two h1 {
+  color: white;
+}
+
+.flex-two .text-last {
+  border-bottom: 1px solid var(--very-light-grayish-blue);  
+}
+
+.flex-two .btn-more {
+  background-color: white;
+  background-image: none;
+  color: hsl(237, 63%, 64%);
+}
+
+.card .monthly {
+  display: none;
+}
+
+.attribution {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.attribution a {
+  text-decoration: underline;
+  color: black;
+}
+
+@media only screen and (max-width: 300px) {
+  .card h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  body {
+    background-size: auto;
+  }
+
+  .top-pricing {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: center;
+  }
+
+  .btn-toggle {
+    margin: 0 2%;
+  }
+
+  .top-pricing h1 {
+    margin-bottom: 3%;
+    font-size: 35px;
+  }
+
+  .top-pricing span {
+    font-size: 20px;
+  }
+
+  .card {
+    min-width: 320px;
+  }
+
+  .flex-one {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .flex-three {
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .flex-container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .main {
+    margin: 0 15%;
+  }
+
+  .flex-two {
+    padding: 45px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+
+  .top-pricing {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .top-pricing h1 {
+    font-size: 30px;
+  }
+
+  .top-pricing span {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1050px) {
+
+  .top-pricing {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  .top-pricing h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  .top-pricing span {
+    font-size: 20px;
+  }
+
+  .btn-toggle {
+    margin: 0 25px;
+  }
+
+  .card {
+    width: 40%;
+    margin-bottom: 40px;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+
+}

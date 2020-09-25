@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | [Pricing Component with Toggle]</title>
+</head>
+
+<body>
+
+  <section>
+
+    <div class="top-pricing">
+      <h1>Our Pricing</h1>
+      <div class="flex-container">
+        <span class="pricing-text">Annually</span>
+        <label class="btn-toggle" aria-label="Switch">
+          <input type="checkbox" id="btn-toggle" onclick="toggle()">
+          <span class="slider round"></span>
+        </label>
+        <span class="pricing-text">Monthly</span>
+      </div>
+    </div>
+
+    <div class="flex-container main">
+      <div class="card flex-one">
+        <h3>Basic</h3>
+        <h1 class="monthly"><span class="dollar">&dollar;</span>19.99</h1>
+        <h1 class="annually"><span class="dollar">&dollar;</span>199.99</h1>
+        <p>500 GB Storage</p>
+        <p>2 Users Allowed</p>
+        <p class="text-last">Send up to 3 GB</p>
+        <button class="btn-more" aria-label="Learn More">
+          Learn More
+        </button>
+      </div>
+
+      <div class="card flex-two">
+        <h3>Professional</h3>
+        <h1 class="monthly"><span class="dollar">&dollar;</span>24.99</h1>
+        <h1 class="annually"><span class="dollar">&dollar;</span>249.99</h1>
+        <p>1 TB Storage</p>
+        <p>5 Users Allowed</p>
+        <p class="text-last">Send up to 10 GB</p>
+        <button class="btn-more" aria-label="Learn More">
+          Learn More
+        </button>
+      </div>
+
+      <div class="card flex-three">
+        <h3>Master</h3>
+        <h1 class="monthly"><span class="dollar">&dollar;</span>39.99</h1>
+        <h1 class="annually"><span class="dollar">&dollar;</span>399.99</h1>
+        <p>2 TB Storage</p>
+        <p>10 Users Allowed</p>
+        <p class="text-last">Send up to 20 GB</p>
+        <button class="btn-more" aria-label="Learn More">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      <br>
+      Coded by <a href="https://github.com/algavania/Pricing-Component-with-Toggle" target="_blank">Alga</a>.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
